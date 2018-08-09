@@ -1,0 +1,47 @@
+.signUp_title{font-size:16px; font-weight:bold; padding: 1.333333rem 0 1.333333rem; color:#333;}
+.avator_box{margin:0 auto; width:120px; margin-bottom:20px;}
+.avator_box .selectImg{position:relative; width:120px; height:120px;}
+.avator_box .selectImg img{position:absolute; top: 0; left: 0; }
+.avator_box .selectImg input{position:absolute; top: 0; left: 0; width: 120px; opacity: 0; height: 150px; z-index: 1; }
+.avator_box .selectImg img{width:120px; height:120px; border-radius:50%; margin: 0 auto; }
+.signup_btn{position:fixed; bottom:3rem; }
+
+
+/* nav */
+#appNav{width:100%; height:1.306667rem;  background: #ededed; position:fixed; z-index: 999;  bottom:0; left:0;}
+#appNav nav{height:100%; }
+#appNav .nav_list{ width:100%; height: 100%; overflow:hidden; }
+#appNav .nav_list li{
+  width:33.33%; text-align:center;
+  float:left;
+}
+#appNav .nav_list li i{
+  display: block;
+  width: 0.586667rem;
+  height: 0.586667rem;
+  background-repeat:  no-repeat;
+  background-size:0.586667rem 0.586667rem;
+  margin: 0 auto;
+}
+#appNav .nav_list li a{color:#888; font-size:0.266667rem;  line-height:0.506667rem; padding-top:0.2rem; width:100%; display:block;}
+
+#appNav .nav_list li:nth-child(1) i{
+  background-image: url('/static/icon/bill.png');
+}
+#appNav .nav_list li:nth-child(2) i{
+  background-image: url('/static/icon/home.png');
+}
+#appNav .nav_list li:nth-child(3) i{
+  background-image: url('/static/icon/user.png');
+}
+
+#appNav .nav_list li .on{ color: #000; }
+#appNav .nav_list li:nth-child(1) .on i{
+  background-image: url('/static/icon/bill_active.png');
+}
+#appNav .nav_list li:nth-child(2) .on  i{
+  background-image: url('/static/icon/home_active.png');
+}
+#appNav .nav_list li:nth-child(3) .on  i{
+  background-image: url('/static/icon/user_active.png');
+}
