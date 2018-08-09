@@ -2,6 +2,9 @@
 koa2+mysql+vue+vant 构建简单版移动端博客
 
 
+
+
+
 运行koa步骤:
 
 1: 安装 mysql
@@ -15,6 +18,10 @@ koa2+mysql+vue+vant 构建简单版移动端博客
 5: node app.js
 
 6: chrome localhost:3001
+
+
+
+
 
 运行Vue项目:
 
