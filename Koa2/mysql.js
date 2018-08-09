@@ -71,7 +71,7 @@ const insetUser = (val) => { // 注册
 }
 
 const findUser = (val) => { // 查找所有User
-  let _sql = `SELECT * FROM users WHERE userName = ${val}`
+  let _sql = `SELECT * FROM users WHERE userName = '${val}'`
   return query(_sql)
 }
 
@@ -101,12 +101,12 @@ const postsList = (key, pg, size) => { // 查找所有posts
 }
 
 const postDetail = (val) => { // 根据ID 查询 postsDetail
-  let _sql = `SELECT * FROM posts WHERE id = ${val}`
+  let _sql = `SELECT * FROM posts WHERE id = '${val}'`
   return query(_sql)
 }
 
 const commentList = (val) => { // 获取留言列表
-  let _sql = `SELECT * FROM comment WHERE postId = ${val} ORDER BY createTime DESC`
+  let _sql = `SELECT * FROM comment WHERE postId = '${val}' ORDER BY createTime DESC`
   return query(_sql)
 }
 

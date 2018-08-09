@@ -72,6 +72,6 @@ import cookie from 'js-cookie'
 </script>
 
 <style scoped>
-.signUp_title{padding: 2rem 0; }
+.signUp_title{font-size:16px; font-weight:bold; text-align: center; padding: 1.333333rem 0 1.333333rem; color:#333;}
 
 </style>

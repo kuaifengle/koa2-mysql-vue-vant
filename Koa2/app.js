@@ -17,7 +17,7 @@ app.use(server(
 )) // 设置静态文件
 
 app.use(cors({
-      origin: '*',
+      origin: 'http://localhost:8080',
       exposeHeaders: ['WWW-Authenticate', 'Server-Authorization'],
       maxAge: 5,
       credentials: true,

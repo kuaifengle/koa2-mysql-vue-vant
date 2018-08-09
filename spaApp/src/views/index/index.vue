@@ -10,7 +10,9 @@
     </van-search>
 
     <van-cell-group>
-      <van-list v-model="loading" :immediate-check="false" :finished="finished" @load="onLoad" >
+      <van-nav-bar v-if="!postList.length" title="暂无文章,快去发一篇吧!" />
+
+      <van-list v-model="loading" :immediate-check="false" :offset="20" :finished="finished" @load="onLoad" >
         <van-cell  v-for="(item, index) in postList" :key="index" :title="item.title" :value="'作者:'+ item.userName" :label="item.content.substring(0, 10) + '...'" @click="$router.push({path:'/postPage',query: {id: item.id }})" >
         </van-cell>
       </van-list>
@@ -67,10 +69,11 @@ export default {
       this.getList(true)
     },
     onLoad () {
+        this.loading = true;
       setTimeout(() => {
         this.pg ++
         this.getList(false)
-      }, 1000)
+      }, 2000)
     }
   }
 }

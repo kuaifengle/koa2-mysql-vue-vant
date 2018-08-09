@@ -6,12 +6,7 @@
 
 <script>
 export default {
-  name: 'App',
-  mounted () {
-    // this.$http('/').then((res) => {
-    //   console.log(res)
-    // })
-  }
+  name: 'App'
 }
 </script>
 

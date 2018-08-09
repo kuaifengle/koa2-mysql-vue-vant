@@ -88,5 +88,6 @@ import md5 from 'js-md5'
 </script>
 
 <style scoped>
-.signUp_title{padding: 1.333333rem 0 0.5rem; }
+.signUp_title{font-size:16px; font-weight:bold; padding: 1.333333rem 0 1.333333rem; color:#333;}
+
 </style>
