@@ -1,9 +1,10 @@
 # koa2-mysql-vue-vant-
 ## koa2+mysql+vue+vant 构建简单版移动端博客
 
+<br/> 
+<br/> 
 
-
-###运行koa步骤:
+##运行koa步骤:
 <br/> 
 
     1: 安装 mysql
@@ -21,7 +22,8 @@
 <br/> 
 <br/> 
 <br/> 
-###运行Vue项目:
+
+##运行Vue项目:
 <br/> 
  
     1: cd spaVue
