@@ -1,5 +1,12 @@
-# koa2-mysql-vue-vant-
+# koa2-mysql-vue-vant
 ## koa2+mysql+vue+vant 构建简单版移动端博客
+
+
+![演示1](https://github.com/kuaifengle/koa2-mysql-vue-vant/blob/master/readme/show1.gif?raw=true)
+<br/>
+![演示2](https://github.com/kuaifengle/koa2-mysql-vue-vant/blob/master/readme/show2.gif?raw=true)
+<br/>
+![演示3](https://github.com/kuaifengle/koa2-mysql-vue-vant/blob/master/readme/show3.gif?raw=true)
 
 <br/> 
 <br/> 
@@ -16,9 +23,10 @@
     4: npm install 
 
     5: node app.js
- 
+    
     6: chrome localhost:3001
 <br/>  
+
 <br/> 
 <br/> 
 <br/> 
