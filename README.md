@@ -1,34 +1,32 @@
 # koa2-mysql-vue-vant-
-koa2+mysql+vue+vant 构建简单版移动端博客
+## koa2+mysql+vue+vant 构建简单版移动端博客
 
 
-/n
-/n
 
 运行koa步骤:
 
-1: 安装 mysql
-
-2: 安装 node.js
-
-3: cd Koa2 
-
-4: npm install 
-
-5: node app.js
-
-6: chrome localhost:3001
-
-
-
-
-
+    1: 安装 mysql
+\<br>  
+    2: 安装 node.js
+\<br>  
+    3: cd Koa2 
+\<br>  
+    4: npm install 
+\<br>  
+    5: node app.js
+\<br>  
+    6: chrome localhost:3001
+\<br>  
+\<br>  
+\<br>  
+\<br>  
+\<br>  
 运行Vue项目:
-
-1: cd spaVue
-
-2: npm install
-
-3: npm run dev
-
-4: npm run build
+\<br>  
+    1: cd spaVue
+\<br>  
+    2: npm install
+\<br>  
+    3: npm run dev
+\<br>  
+    4: npm run build
