@@ -1,7 +1,8 @@
 <template>
   <div>
     <van-nav-bar />
-    <van-nav-bar  title="文章列表" fixed  @click-right="$router.push('/edit')">
+    <van-nav-bar  title="文章列表" fixed  @click-right="$router.push('/edit')" @click-left="signOut">
+      <span name="edit" slot="left" v-if="isSignIn" style="color:#38f;">登出</span>
       <van-icon name="edit" slot="right" />
     </van-nav-bar>
 
@@ -22,6 +23,8 @@
 </template>
 
 <script>
+import { Dialog } from 'vant';
+import cookie from 'js-cookie'
 
 export default {
   data () {
@@ -31,11 +34,17 @@ export default {
       loading: false,
       finished: false,
       pg: 1,
-      size: 10
+      size: 10,
+      isSignIn: false
     }
   },
   mounted () {
     this.getList(false)
+    if (cookie.get('assent_token')) {
+      this.isSignIn = true
+    } else {
+      this.isSignIn = false
+    }
   },
   methods: {
     getList (boolean) {
@@ -74,6 +83,18 @@ export default {
         this.pg ++
         this.getList(false)
       }, 2000)
+    },
+    signOut () {
+      Dialog.confirm({
+        title: '登出',
+        message: '确定要登出吗?'
+      }).then(() => {
+        cookie.remove('assent_token')
+        this.isSignIn = false
+        this.Toast('你已登出!')
+      }).catch(() => {
+        this.Toast('你已取消操作!')
+      });
     }
   }
 }
