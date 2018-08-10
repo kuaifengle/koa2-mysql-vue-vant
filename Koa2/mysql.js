@@ -96,7 +96,7 @@ const updatePostsHot = (val) => { // 修改posts查看人数
 }
 
 const postsList = (key, pg, size) => { // 查找所有posts
-  let _sql = `SELECT * FROM posts ${ key ? "WHERE title LIKE '%"+key+"%' " : ' '}ORDER BY createTime DESC limit ${pg * size} , ${size * (pg + 1)}`
+  let _sql = `SELECT * FROM posts ${ key ? "WHERE title LIKE '%"+key+"%' " : ' '}ORDER BY createTime DESC limit ${pg * size} , ${size}`
   return query(_sql)
 }
 

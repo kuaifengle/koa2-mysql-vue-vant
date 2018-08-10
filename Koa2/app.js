@@ -3,11 +3,10 @@ const Koa = require('koa2');
 const router = require('koa-router');
 var cors = require('koa-cors');
 const bodyParser = require('koa-bodyparser');
-// const session = require('koa-session');
 const config = require('./config.js');
 const server = require('koa-static');
 const jwt = require('jsonwebtoken')
-const jwtKoa = require('koa-jwt')
+
 require('./mysql.js');
 
 const app = new Koa();
@@ -33,7 +32,6 @@ app.use(bodyParser({
 
 app.use(require('./routers/signUp.js').routes()) // 注册
 app.use(require('./routers/signIn.js').routes()) // 登录
-app.use(require('./routers/userDetail.js').routes()) // 用户detail
 
 app.use(require('./routers/createPosts.js').routes()) // 新建文章
 app.use(require('./routers/postsList.js').routes()) // 搜索文章
@@ -43,6 +41,6 @@ app.use(require('./routers/updatePosts.js').routes()) // 修改文章
 app.use(require('./routers/createComment.js').routes()) // 添加留言
 app.use(require('./routers/commentList.js').routes()) // 获取留言
 
-app.listen(config.port)
+app.listen(config.port) // 监听端口
 
 console.log('listen in localhost:' + config.port)

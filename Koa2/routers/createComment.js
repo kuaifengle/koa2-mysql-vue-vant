@@ -3,6 +3,7 @@ let commentModel = require('../mysql.js')
 
 const checkToken = require('../token/checkToken.js');
 
+// 新建留言
 router.get('/createComment', checkToken, async (ctx, next) => {
 
     if (!ctx.query.content) {
@@ -31,7 +32,7 @@ router.get('/createComment', checkToken, async (ctx, next) => {
         data: []
       }
       
-      await commentModel.postDetail(postsData.id).then(async (res) => {
+      await commentModel.postDetail(postsData.id).then(async (res) => {  // 文章评论数量 + 1
         console.log(res[0])
         if (res[0]) {
           await commentModel.updatePostsComment([Number(res[0].comments) + 1, res[0].id])

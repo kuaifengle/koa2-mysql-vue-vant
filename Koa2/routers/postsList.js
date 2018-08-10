@@ -1,6 +1,7 @@
 let router = require('koa-router')();
 let postsModel = require('../mysql.js')
 
+// 下拉获取文章
 router.get('/postsList', async (ctx, next) => {
 
   var key = ctx.query.title

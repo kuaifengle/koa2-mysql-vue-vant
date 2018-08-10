@@ -3,6 +3,8 @@ let postsModel = require('../mysql.js')
 
 const getToken = require('../token/getToken.js');
 
+
+// 文章详情
 router.get('/postDetail', getToken, async (ctx, next) => {
   var key = ctx.query.id
 

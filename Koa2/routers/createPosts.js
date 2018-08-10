@@ -3,8 +3,8 @@ let postsModel = require('../mysql.js')
 
 const checkToken = require('../token/checkToken.js');
 
+// 新建文章
 router.get('/createPosts', checkToken, async (ctx, next) => {
-    // console.log(ctx.userInfo)
 
     if (!ctx.query.title) {
       ctx.body = {

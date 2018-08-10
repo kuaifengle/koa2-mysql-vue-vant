@@ -3,6 +3,7 @@ const uuidV1 = require('uuid/v1');
 const userModel = require('../mysql.js');
 const fs = require('fs');
 
+// 注册
 router.post('/signUp', async (ctx, next) => {
   let user = {
     userName: ctx.request.body.userName,
@@ -12,7 +13,7 @@ router.post('/signUp', async (ctx, next) => {
   }
 
   await userModel.findUser(user.userName).then(async (res) => {
-    if (res.length) {
+    if (res.length) { // length > 1 说明 表中有数据
       try {
         throw Error('用户已存在')
       } catch (err) {
@@ -29,10 +30,12 @@ router.post('/signUp', async (ctx, next) => {
         msg: '密码输入错误',
         data: []
       }
-    } else {
+    } else {  // 否者没有注册
       let base64Data = user.avator.replace(/^data:image\/\w+;base64,/, "");
       let dataBuffer = new Buffer(base64Data, 'base64');
       let getName = Number(Math.random().toString().substr(3)).toString(36) + Date.now()
+
+      // 上传图片到 public/images 文件夹中
       await fs.writeFile('./public/images/' + getName + '.png', dataBuffer, err => {
           if (err) {
             console.log(err);

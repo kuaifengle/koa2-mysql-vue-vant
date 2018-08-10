@@ -1,9 +1,9 @@
-module.exports = {
+module.exports = {  // mysql 配置
   mysql: {
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'test'
+    database: 'test' // test库
   },
   port: 3001
 }

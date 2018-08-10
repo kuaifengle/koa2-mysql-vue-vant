@@ -1,6 +1,8 @@
 let router = require('koa-router')();
 let postsModel = require('../mysql.js')
 
+
+// 获取所有文章列表
 router.get('/postsList', async (ctx, next) => {
 
     await postsModel.postsList().then((res) => {

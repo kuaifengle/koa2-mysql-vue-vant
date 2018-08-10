@@ -1,6 +1,7 @@
 let router = require('koa-router')();
 let commentModel = require('../mysql.js')
 
+// 获取所有留言
 router.get('/commentList', async (ctx, next) => {
 
   if (!ctx.query.id) {

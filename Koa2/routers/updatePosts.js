@@ -3,6 +3,7 @@ let postsModel = require('../mysql.js')
 
 const checkToken = require('../token/checkToken.js');
 
+// 更新文章
 router.get('/updatePosts', checkToken, async (ctx, next) => {
 
     if (!ctx.query.title) {
